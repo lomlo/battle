@@ -19,15 +19,19 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player1 = $player1.name
-    @player2 = $player2.name
+    @player1_name = $player1.name
+    @player2_name = $player2.name
+    @player2_health = $player2.hp
     erb :play
   end
 
   post '/play' do
-  	@player1 = $player1.name
-    @player2 = $player2.name
-    @player2_health = $player2.hp
+    @player1 = $player1
+    @player2 = $player2
+  	@player1_name = $player1.name
+    @player2_name = $player2.name
+    @player1.attack(@player2)
+    @player2_health = @player2.hp
   	@attacked = true
   	erb :play
   end

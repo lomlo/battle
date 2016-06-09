@@ -1,8 +1,8 @@
-<h1>Play:	<%= @player1 %> -vs- <%= @player2 %></h1>
+<h1>Play:	<%= @player1_name %> -vs- <%= @player2_name %></h1>
 
-<p>Player1: <%= @player1 %></p>
-<p>Player2: <%= @player2 %></p>
-<p><%= @player2 %>'s HitPoints: <%= @player2_health%></p>
+<p>Player1: <%= @player1_name %></p>
+<p>Player2: <%= @player2_name %></p>
+<p><%= @player2_name %>'s HitPoints: <%= @player2_health%></p>
 
 
 <div>
@@ -11,5 +11,5 @@
     </form>
 </div>
 <% if @attacked %>
-	<%= @player1 %> has attacked <%= @player2 %>
+	<%= @player1_name %> has attacked <%= @player2_name %>
 <%end%>
