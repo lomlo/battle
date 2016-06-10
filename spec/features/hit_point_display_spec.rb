@@ -9,10 +9,10 @@ require_relative "../../app"
       #names = %w(Andrea Randy Giorgia Jill)
       #current_name = names.sample
       visit("/")
-      fill_in('player1', with: 'Andrea')
-      fill_in('player2', with: 'Randy')
+      fill_in('player1', with: 'Moose')
+      fill_in('player2', with: 'Duck')
       click_button('Play')
       #expect(page).to have_content("#{current_name}'s HitPoints: 100")
-      expect(page).to have_content("Randy's HitPoints: 100")
-    end 
-  end  
+      expect(page).to have_content("Duck's HitPoints: 100")
+    end
+  end

@@ -1,14 +1,15 @@
-class Player
+# to store and change the state of a user
 
-	attr_reader :name
-	attr_accessor :hp
+class Player
+    attr_reader :name
+    attr_accessor :hp
 
   def initialize(name)
     @name = name
     @hp = 100
   end
 
-  def attack(player)
-    player.hp -= 10
+  def receive_damage
+    @hp -= 10
   end
 end

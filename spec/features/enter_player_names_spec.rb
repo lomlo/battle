@@ -7,6 +7,6 @@ require_relative "../../app"
   feature "Players enter names" do
     scenario "player names are displayed onscreen" do
       sign_in_and_play
-      expect(page).to have_content("Andrea -vs- Randy")
+      expect(page).to have_content("Moose -vs- Duck")
     end
   end
